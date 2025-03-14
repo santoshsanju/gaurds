@@ -1,11 +1,19 @@
-<span>
+<div>
   <ul>
     <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/products">Products</a> <a routerLink="/products/detail">Product Details</a></li>
+    <li><a routerLink="/dashboard">Dashboard</a>
+    <li><a routerLink="/products">Products</a>
+      <!-- <div><a (click)="onRouterClick()">Product Details</a></div> -->
+      <div><a routerLink="/products/detail" [queryParams]="{id:1}">Product Details</a></div>
+      <div><a routerLink="/products/admin-detail">Admin Product Details</a></div>
+    </li>
     <li><a routerLink="/about">About Us</a></li>
     <li><a routerLink="/contact">Contact Us</a></li>
+    <li><a routerLink="/cart">Cart</a>
+      <div><a routerLink="/cart/my-wishlist">Cart My Wishlist</a></div>
+    </li>
     <li><a routerLink="/login">login</a></li>
   </ul>
-</span>
+</div>
 <h1>Hello From</h1>
 <router-outlet></router-outlet>

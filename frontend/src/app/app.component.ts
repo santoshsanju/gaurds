@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +8,12 @@ import { RouterModule } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'frontend';
-  constructor() {
+  constructor(private router: Router) {
   }
-  ngOnInit(): void {
-
+  onRouterClick() {
+    this.router.navigate([ 'products/detail' ], { queryParams: { id: 1 } });
   }
 
 }
